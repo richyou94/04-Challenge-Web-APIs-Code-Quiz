@@ -10,6 +10,10 @@ body {
 
 /* #DFBB9D  for nav bar*/
 
+footer {
+    background-color: #DFBB9D;
+}
+
 /********************************* CLASS CSS STYLE **********************************/
 .heading {
     background-color: #dfbb9d;
