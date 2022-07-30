@@ -15,7 +15,6 @@ h1 {
 };
 
 
-
 a {
     color: white;
     text-decoration: none;
@@ -41,16 +40,25 @@ background-color: #b59880;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    font-size: 200%;
     padding: 15px 30px 10px;
 }
 .timer {
     padding-top: 4px;
+    font-size: 1.5rem;
 }
 .footer {
     background-color: #b59770;
     text-align: center; 
     padding: 10px;
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+.coding-quiz-container {
+    background-color: lightgreen;
+    width: 40%;
+    margin: 50px auto;
+
 }
 
 /********************************* ID CSS STYLE **********************************/
@@ -58,6 +66,8 @@ background-color: #b59880;
 #heading-title {
 display:inline-block;
 width: 60%;
+margin: 0 auto;
+margin-right: 5%;
 }
 
 #logo {
@@ -79,7 +89,7 @@ width: 60%;
     text-shadow: 1px 1px 3px #c9afc9;
     font-family: Arial;
     color: #34495e;
-    font-size: 21px;
+    font-size: 1rem;
     background: #9DD6DF;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
