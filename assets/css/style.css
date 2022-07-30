@@ -5,7 +5,7 @@
 
 body {
     margin: 0;
-    background-color: #F7E2D6; 
+    background-color: #F7E2D6;
     position:relative;
 }
 
@@ -14,12 +14,12 @@ h1 {
     line-height: 1.5;
 };
 
-/* #DFBB9D  for nav bar*/
 
-footer {
-    background-color: #DFBB9D;
+
+a {
+    color: white;
+    text-decoration: none;
 }
-
 /********************************* CLASS CSS STYLE **********************************/
 .top-container {
     position: relative;
@@ -32,8 +32,25 @@ text-align:center;
 margin:0 auto;
 padding: 10px 0px;
 width: 100%;
-background-color: #Dfbb9d;
-    
+background-color: #b59880;
+}
+
+.navbar {
+    background-color:#34495e;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 200%;
+    padding: 15px 30px 10px;
+}
+.timer {
+    padding-top: 4px;
+}
+.footer {
+    background-color: #b59770;
+    text-align: center; 
+    padding: 10px;
 }
 
 /********************************* ID CSS STYLE **********************************/
@@ -41,17 +58,36 @@ background-color: #Dfbb9d;
 #heading-title {
 display:inline-block;
 width: 60%;
-
-margin-left: 1%;
 }
 
 #logo {
-    position: absolute;
+    position: relative;
     max-height: 100px;
-    left: 550px;
-    
+    float: left;
+    margin-left: 10px;
+}
+#timeLeft {
+    margin-right: 20px;
+    margin-left: 30px;
 }
 
+#viewHighscore {
+    margin-left: 5px;
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 1px 1px 3px #c9afc9;
+    font-family: Arial;
+    color: #34495e;
+    font-size: 21px;
+    background: #9DD6DF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+#viewHighscore:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
 /********************************* MEDIA QUERY CSS STYLE **********************************/
 
 
