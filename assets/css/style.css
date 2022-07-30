@@ -61,6 +61,20 @@ background-color: #b59880;
 
 }
 
+.quiz-title {
+    font-size : 3rem;
+    padding: 20px;
+    text-align: center;
+}
+
+.quiz-description {
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 10px;
+}
+.quizBtn {
+    text-align: center;
+}
 /********************************* ID CSS STYLE **********************************/
 
 #heading-title {
