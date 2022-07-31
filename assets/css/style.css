@@ -55,23 +55,26 @@ background-color: #b59880;
     width: 100%;
 }
 .coding-quiz-container {
-    background-color: lightgreen;
+    background-color: #F7E2D6;
     width: 40%;
-    margin: 50px auto;  
+    margin: 100px auto;  
     position: relative;
+    height: 300px;
+    border: solid #34495e 10px;
+display:none;
 
 }
 
 .quiz-title {
     font-size : 3rem;
-    padding: 20px;
+    padding: 30px;
     text-align: center;
 }
 
 .quiz-description {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     text-align: left;
-    padding: 50px;
+    padding: 10px 40px;
 }
 .startBtn {
     -webkit-border-radius: 60;
@@ -85,13 +88,35 @@ background-color: #b59880;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     margin: 0 auto;
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    left: 40%;
+    
     
 }
 
 .startBtn:hover {
     background: #3cb0fd;
     text-decoration: none;
+}
+.multiple-choice-container {
+    background-color: #F7E2D6;
+    width: 40%;
+    margin: 100px auto;  
+    position: relative;
+    height: 300px;
+    border: solid #34495e 10px;
+}
+
+.multiple-choice-title {
+    font-size : 3rem;
+    padding: 30px;
+    text-align: center;
+}
+.multiple-choice-answer {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 10px 40px;
 }
 /********************************* ID CSS STYLE **********************************/
 
