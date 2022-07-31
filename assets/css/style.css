@@ -19,10 +19,9 @@ a {
     color: white;
     text-decoration: none;
 }
-
-ul {
+/* ul {
     list-style: none;
-}
+} */
 /********************************* CLASS CSS STYLE **********************************/
 .top-container {
     position: relative;
@@ -109,14 +108,14 @@ background-color: #b59880;
     width: 40%;
     margin: 100px auto;  
     position: relative;
-    height: 300px;
+    height: 450px;
     border: solid #34495e 10px;
-    /* display: none; */
+    /* display:none; */
 }
 
 .multiple-choice-title {
-    font-size : 3rem;
-    padding: 30px;
+    font-size : 1.5rem;
+    padding: 10px;
     text-align: center;
 }
 .multiple-choice-answer {
@@ -124,9 +123,17 @@ background-color: #b59880;
     text-align: left;
     padding: 10px 40px;
 }
+.choiceBtn {
+    margin: 20px;
+    padding: 5px;
+}
 
-.choiceList {
-    list-style :none;
+.logMessage {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+    padding: 20px 0px;
+    margin-bottom: 10px;
 }
 
 /********************************* ID CSS STYLE **********************************/
