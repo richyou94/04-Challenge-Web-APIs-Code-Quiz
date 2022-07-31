@@ -61,7 +61,7 @@ background-color: #b59880;
     position: relative;
     height: 300px;
     border: solid #34495e 10px;
-display:none;
+
 
 }
 
@@ -106,6 +106,7 @@ display:none;
     position: relative;
     height: 300px;
     border: solid #34495e 10px;
+    display: none;
 }
 
 .multiple-choice-title {
