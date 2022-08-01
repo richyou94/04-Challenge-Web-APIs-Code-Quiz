@@ -80,7 +80,7 @@ aBtnEl.addEventListener("click", function() {
         messageLog.textContent = "Correct!";
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        });
+        }, 1500);
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
 
@@ -112,7 +112,7 @@ bBtnEl.addEventListener("click", function() {
         messageLog.textContent = "Correct!";
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        });
+        }, 1500);
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
 
@@ -144,7 +144,7 @@ cBtnEl.addEventListener("click", function() {
         messageLog.textContent = "Correct!";
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        });
+        }, 1500);
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
 
@@ -172,11 +172,12 @@ dBtnEl.addEventListener("click", function() {
     ///
 
     if (isTrue === true) {
-        messageBox.setAttribute("style", "display:block");
+        messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        });
+        }, 2000);
+        console.log(messageLog.textContent)
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
 
@@ -186,7 +187,7 @@ dBtnEl.addEventListener("click", function() {
         minusTime();
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        }, 1500);
+        }, 2000);
     }
 
 

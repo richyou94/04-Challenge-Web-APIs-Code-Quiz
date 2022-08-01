@@ -142,6 +142,29 @@ background-color: #b59880;
     font-size: 2rem;
 }
 
+.ending-container {
+    background-color: #F7E2D6;
+    width: 60%;
+    margin: 100px auto;  
+    position: relative;
+    height: 250px;
+    border: solid #34495e 10px;
+    display: none; 
+}
+.resultLog {
+    font-size : 3rem;
+    padding: 20px;
+    text-align: left;
+}
+.finalScore {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 20px;
+}
+.initial-form {
+    padding: 20px;
+}
+
 /********************************* ID CSS STYLE **********************************/
 
 #heading-title {
