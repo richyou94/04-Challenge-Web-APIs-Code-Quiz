@@ -91,12 +91,15 @@ aBtnEl.addEventListener("click", function() {
     ///
     
     if (isTrue === true) {
+        if (arraySets == "") {
+            console.log("no more question")
+        } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
         console.log(messageLog.textContent)
-        setQuestion(); 
+        setQuestion(); }
     } else if (secondsLeft <=15 ) {
         clearInterval(timerInterval);
         timeLeft.textContent = "0"
@@ -121,12 +124,15 @@ bBtnEl.addEventListener("click", function() {
     ///
     
     if (isTrue === true) {
+        if (arraySets == "") {
+            console.log("no more question")
+        } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
         console.log(messageLog.textContent)
-        setQuestion(); 
+        setQuestion(); }
     } else if (secondsLeft <=15 ) {
         clearInterval(timerInterval);
         timeLeft.textContent = "0"
@@ -151,12 +157,15 @@ cBtnEl.addEventListener("click", function() {
     ///
     
     if (isTrue === true) {
+        if (arraySets == "") {
+            console.log("no more question")
+        } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
         console.log(messageLog.textContent)
-        setQuestion(); 
+        setQuestion(); }
     } else if (secondsLeft <=15 ) {
         clearInterval(timerInterval);
         timeLeft.textContent = "0"
@@ -181,12 +190,16 @@ dBtnEl.addEventListener("click", function() {
     ///
     
     if (isTrue === true) {
+        if (arraySets == "") {
+            console.log("no more question")
+            
+        } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
         console.log(messageLog.textContent)
-        setQuestion(); 
+        setQuestion(); }
     } else if (secondsLeft <=15 ) {
         clearInterval(timerInterval);
         timeLeft.textContent = "0"
