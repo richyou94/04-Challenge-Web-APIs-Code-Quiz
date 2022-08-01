@@ -208,6 +208,75 @@ background-color: #b59880;
     background: #3cb0fd;
     text-decoration: none;
 }
+
+.highScore-container {
+    background-color: #F7E2D6;
+    width: 60%;
+    margin: 100px auto;  
+    position: relative;
+    min-height: 320px;
+    border: solid #34495e 10px;
+    display: none; 
+}
+.highscore-Log {
+    font-size : 3rem;
+    padding: 20px;
+    text-align: left;
+}
+.highscore-list {
+    font-size: 1.3rem;
+    text-align: left;
+    padding: 20px;
+}
+.clearBtn {
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 1px 1px 3px #c9afc9;
+    font-family: Arial;
+    color: #34495e;
+    font-size: 1rem;
+    background: #9DD6DF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 10px auto;
+    position: relative;
+    
+    
+    
+}
+
+.clearBtn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+.goBackBtn {
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 1px 1px 3px #c9afc9;
+    font-family: Arial;
+    color: #34495e;
+    font-size: 1rem;
+    background: #9DD6DF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 10px auto;
+    position: relative;
+    
+    
+    
+}
+
+.goBackBtn:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
+
+.twoBtn {
+    display:flex;
+    justify-content: space-between;
+}
 /********************************* ID CSS STYLE **********************************/
 
 #heading-title {
