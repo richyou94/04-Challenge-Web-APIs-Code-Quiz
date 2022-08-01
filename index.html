@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="./assets/images/coding-quiz-favicon.ico">
     <title>Code Quiz</title>
@@ -12,18 +11,20 @@
 
 <body>
     <div class="top-container">
+        <!-- Heading Bar for Logo and Title -->
         <div class="heading">
             <img id="logo"src ="./assets/images/Coding-Quiz-logo-transparent.png" alt="logo image for Code Quiz with transparent background"/>
             <h1 id="heading-title">Code Quiz</h1>
         </div>
+        <!--Navigation Bar for "view high score" and "Time Left" -->
         <nav class="navbar">
             <button id="viewHighscore">View Highscores</button>
             <h3 class="timer">Time Left: <span id="timeLeft"></span></h3>
         </nav>
     </div>
-    <hr>
+    <!-- <hr> will delete later after finishing the project-->
     <main>
-                <!-- Box with the Code Quiz -->
+            <!-- Initial Box with start Quiz Button-->
             <div class="coding-quiz-container">
                 <h2 class="quiz-title">Coding Quiz Challenge</h2>
                 <p class = "quiz-description"> Try to answer the following code-related questions within the time limit. 
@@ -32,6 +33,7 @@
                 </p>
                 <btn class="startBtn">Start Quiz</btn>
             </div>
+            <!-- Multiple Choice Quiz Box for actual quiz -->
             <div class="multiple-choice-container">
                 <h2 class="multiple-choice-title"></h2>
                 <ul>
@@ -40,11 +42,13 @@
                     <li><button class="cBtn choiceBtn"></button></li>
                     <li><button class="dBtn choiceBtn"></button></li>
                 </ul>
+            <!-- Hidden log Message for when it gets correct / incorrect -->
                 <div class = "logMessage">
                     <hr>
                     <p class="message"></p>
                 </div>
             </div>
+            <!-- Result Box for showing the results -->
             <div class="ending-container">
                 <h2 class="resultLog"></h2>
                 <p class="finalScore">your final score is </p>
@@ -55,12 +59,15 @@
                     <input type="submit" value="Submit" class="submit-button">
                 </form>
             </div>
+            <!-- Score Box for showing highscores  -->
             <div class="highScore-container">
                 <h2 class="highscore-Log">HIGHSCORES</h2>
                 <ul class="highscore-list">
                 </ul>
                 <div class="twoBtn">
+                    <!-- Go back button will go back to previous box -->
                     <button class="goBackBtn">GO BACK</button>
+                    <!-- Clear Button will clear the highscores array -->
                     <button class="clearBtn">Clear Highscores</button>
                 </div>
             </div>
