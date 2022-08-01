@@ -3,6 +3,7 @@ var initialBox = document.querySelector(".coding-quiz-container");
 var quizBox = document.querySelector(".multiple-choice-container");
 var timeLeft = document.querySelector("#timeLeft");
 var secondsLeft = 75;
+var messageLog = document.querySelector(".message")
 
 var aBtnEl = document.querySelector(".aBtn")
 var bBtnEl = document.querySelector(".bBtn")
@@ -20,7 +21,24 @@ var arraySets = [setOne, setTwo, setThree, setFour, setFive]
 
 var questionEl = document.querySelector(".multiple-choice-title")
 
-var currentQuestion
+var answerSheetQuestion = ["Commonly used data types DO NOT include:", 
+"The condition in an if / else statement is enclosed within", 
+"Arrays in Javascript can be used to store ______.", 
+"String values must be enclosed within __________ when being assigned to variables.",
+"A very useful tool used during development and debugging for printing content to the debugger is: "
+]
+var answerSheetAnswer = [
+    "3. alerts",
+    "3. parenthesis",
+    "4. all of the above",
+    "3. quotes",
+    "4. console.log"
+]
+
+var currentQuestion;
+var currentAnswer;
+var isTrue;
+
 
 
 function setTime() {
@@ -57,14 +75,28 @@ cBtnEl.addEventListener("click", function() {
 });
 
 dBtnEl.addEventListener("click", function() {
-    console.log(currentQuestion)
+    console.log(currentQuestion);
+    console.log(currentAnswer);
+    console.log(this.textContent)
+    checkAnswer(this);
+    console.log(isTrue);
+    ///
+    if (isTrue === true) {
+        setQuestion(); 
+    } else {
+        messageLog.textContent = "Incorrect. Please try it again."
+    }
 
 });
 
 
 
-function checkAnswer(a, b) {
-    
+function checkAnswer(btn) {
+    if (currentAnswer === btn.textContent) {
+        isTrue = true;
+    } else {
+        isTrue = false;
+    }
 }
 
 function setQuestion() {
@@ -79,6 +111,9 @@ function setQuestion() {
     dBtnEl.textContent = selectedArray[4]; 
 
     currentQuestion = arraySets[randomNum][0]
+    currentAnswer = answerSheetAnswer[
+    answerSheetQuestion.indexOf(currentQuestion)
+    ];
     arraySets.splice(randomNum, 1)
     
 
