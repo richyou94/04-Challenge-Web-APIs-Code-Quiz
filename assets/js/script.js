@@ -1,3 +1,4 @@
+
 //****************   Variables   ****************//
 // Variable for Boxes
 var initialBox = document.querySelector(".coding-quiz-container");
@@ -222,12 +223,14 @@ clearBtn.addEventListener("click", function() {
 // button for starting the quiz, it sets the questions and answers
 // and set Timer 
 // and change status into "quiz"
+// and emptied the initial text box of form
 startBtn.addEventListener("click", function() {
     statusBox = "quiz";
     initialBox.setAttribute("style", "display: none");
     quizBox.setAttribute("style", "display: block");
     setQuestion();
     setTime();
+    document.querySelector("#initial").value = "";
     console.log(statusBox);
 });
 // button for submitting the highscores with initial
