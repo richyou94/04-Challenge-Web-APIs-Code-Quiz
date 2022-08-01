@@ -45,6 +45,7 @@ background-color: #b59880;
     width: 100%;
     padding: 15px 30px 10px;
 }
+
 .timer {
     padding-top: 4px;
     font-size: 1.5rem;
@@ -147,7 +148,7 @@ background-color: #b59880;
     width: 60%;
     margin: 100px auto;  
     position: relative;
-    height: 250px;
+    height: 320px;
     border: solid #34495e 10px;
     display: none; 
 }
@@ -165,6 +166,48 @@ background-color: #b59880;
     padding: 20px;
 }
 
+#msg {
+    visibility: hidden;
+    margin-top: 20px;
+    font-weight: 700;
+    height: 1.2em;
+    font-size: 1.2em;
+  }
+  
+  #msg.success,
+  #msg.error {
+    visibility: visible;
+  }
+  
+  #msg.success {
+    color: #001b44;;
+  }
+  
+  #msg.error {
+    color: #e6252c;
+  }
+  .submit-button {
+    -webkit-border-radius: 60;
+    -moz-border-radius: 60;
+    border-radius: 60px;
+    text-shadow: 1px 1px 3px #c9afc9;
+    font-family: Arial;
+    color: #34495e;
+    font-size: 1rem;
+    background: #9DD6DF;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    margin: 10px auto;
+    position: relative;
+    
+    
+    
+}
+
+.submit-button:hover {
+    background: #3cb0fd;
+    text-decoration: none;
+}
 /********************************* ID CSS STYLE **********************************/
 
 #heading-title {
@@ -202,6 +245,7 @@ margin-right: 5%;
     background: #3cb0fd;
     text-decoration: none;
 }
+
 /********************************* MEDIA QUERY CSS STYLE **********************************/
 
 

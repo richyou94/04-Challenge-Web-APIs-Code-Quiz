@@ -1,7 +1,12 @@
 var startBtn = document.querySelector(".startBtn");
 var initialBox = document.querySelector(".coding-quiz-container");
 var quizBox = document.querySelector(".multiple-choice-container");
-var resultBox = document.querySelector(".ending-container")
+var resultBox = document.querySelector(".ending-container");
+var submitBtn = document.querySelector(".submit-button");
+var msgDiv = document.querySelector("#msg");
+
+var highScoreBtn = document.querySelector("#viewHighscore")
+var highScoreList = document.querySelector(".highscore-list")
 
 var timeLeft = document.querySelector("#timeLeft");
 var secondsLeft = 75;
@@ -49,6 +54,31 @@ var currentAnswer;
 var isTrue;
 var myTimeout;
 
+var listOfHighScores;
+var initialList = [];
+var initialScoreList = [];
+
+
+renderLastRegistered();
+
+function renderLastRegistered() {
+    highScoreList.innerHTML = "";
+
+    if (initial == "") {
+    return;    
+    } else {
+        for (var i = 0; i < initialList.length; i++) {
+            var itemEl = initialList[i];
+            var scoreEl = initialScoreList[i];
+
+            var li = document.createElement("li");
+            li.textContent = `${itemEl} : ${scoreEl}`;
+            li.setAttribute("data-index", i);
+            highScoreList.appendChild(li);
+        }
+    }
+};
+
 function hideLogMessage() {
     myTimeout = setTimeout(function() {
         messageBox.setAttribute("style", "display:none")
@@ -77,6 +107,18 @@ function minusTime() {
     secondsLeft = secondsLeft - 15;
 }
 
+function displayMessage(type, message) {
+    msgDiv.textContent = message;
+    msgDiv.setAttribute("class", type);
+}
+
+highScoreBtn.addEventListener("click", function() {
+    initialBox.setAttribute("style", "display:none;");
+    quizBox.setAttribute("style", "display:none;");
+    resultBox.setAttribute("style", "display:none;");
+
+});
+
 startBtn.addEventListener("click", function() {
     var arraySets = [setOne, setTwo, setThree, setFour, setFive]
     initialBox.setAttribute("style", "display: none")
@@ -84,6 +126,23 @@ startBtn.addEventListener("click", function() {
     setQuestion();
     setTime();
 });
+
+submitBtn.addEventListener("click", function(event) {
+    event.preventDefault();
+
+    var initial = document.querySelector("#initial").value;
+
+    if (initial === "") {
+        displayMessage("error", "Initials cannot be blank");
+    } else {
+        displayMessage("success", "Submitted successfully");
+        initialList.push(initial);
+        initialScoreList.push(finalScore);
+        localStorage.setItem("initial", initial);
+        localStorage.setItem("score", finalScore);
+        renderLastRegistered();
+    }
+})
 
 function doneQuiz() {
     clearInterval(timerInterval);
@@ -266,6 +325,10 @@ function setQuestion() {
     answerSheetQuestion.indexOf(currentQuestion)
     ];
     arraySets.splice(randomNum, 1)
-    
 
 }
+
+
+
+////                            Result Box ///
+
