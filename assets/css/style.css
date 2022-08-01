@@ -136,6 +136,11 @@ background-color: #b59880;
     margin-bottom: 10px;
 }
 
+.message {
+    padding: 10px;
+    font-size: 2rem;
+}
+
 /********************************* ID CSS STYLE **********************************/
 
 #heading-title {

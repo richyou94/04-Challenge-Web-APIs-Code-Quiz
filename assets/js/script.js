@@ -60,17 +60,53 @@ startBtn.addEventListener("click", function() {
 
 
 aBtnEl.addEventListener("click", function() {
-    
+    console.log(currentQuestion);
+    console.log(currentAnswer);
+    console.log(this.textContent)
+    checkAnswer(this);
+    console.log(isTrue);
+    ///
+    if (isTrue === true) {
+        setQuestion(); 
+    } else {
+        messageLog.textContent = "Incorrect. Please try it again."
+    }
+    console.log(arraySets);
+
     
 });
 
 bBtnEl.addEventListener("click", function() {
-    
+    console.log(currentQuestion);
+    console.log(currentAnswer);
+    console.log(this.textContent)
+    checkAnswer(this);
+    console.log(isTrue);
+    ///
+    if (isTrue === true) {
+        setQuestion(); 
+    } else {
+        messageLog.textContent = "Incorrect. Please try it again."
+    }
+    console.log(arraySets);
+
 
 });
 
 cBtnEl.addEventListener("click", function() {
-    
+    console.log(currentQuestion);
+    console.log(currentAnswer);
+    console.log(this.textContent)
+    checkAnswer(this);
+    console.log(isTrue);
+    ///
+    if (isTrue === true) {
+        setQuestion(); 
+    } else {
+        messageLog.textContent = "Incorrect. Please try it again."
+    }
+    console.log(arraySets);
+
 
 });
 
@@ -86,6 +122,7 @@ dBtnEl.addEventListener("click", function() {
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
     }
+    console.log(arraySets);
 
 });
 
@@ -115,6 +152,6 @@ function setQuestion() {
     answerSheetQuestion.indexOf(currentQuestion)
     ];
     arraySets.splice(randomNum, 1)
-    
+    messageLog.textContent = "";
 
 }
