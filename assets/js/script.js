@@ -57,6 +57,7 @@ function terminateTimeOut() {
 
 
 function setTime() {
+    timeLeft.textContent = secondsLeft;
         timerInterval = setInterval(function() {
         secondsLeft--;
         timeLeft.textContent = secondsLeft;
