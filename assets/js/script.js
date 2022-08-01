@@ -121,7 +121,7 @@ function setTime() {
         secondsLeft--;
         timeLeft.textContent = secondsLeft;
         if (secondsLeft <= 0) {
-            console.log("TIMEOUT")
+            // console.log("TIMEOUT")
             clearInterval(timerInterval);
             quizBox.setAttribute("style", "display:none")
             resultBox.setAttribute("style","display:block")
@@ -196,23 +196,23 @@ highScoreBtn.addEventListener("click", function() {
 // it resets the final score to 100 when the status is in "score"
 // also resets to status into "initial"
 goBackBtn.addEventListener("click", function() {
-    console.log(arraySets);
+    // console.log(arraySets);
     scoreBox.setAttribute("style", "display:none");
     if (statusBox === "initial") {
         initialBox.setAttribute("style", "display:block");
-        console.log(statusBox)
+        // console.log(statusBox)
     } else if (statusBox === "quiz") {
         quizBox.setAttribute("style", "display:block");
-        console.log(statusBox)
+        // console.log(statusBox)
     } else if (statusBox === "result") {
         resultBox.setAttribute("style", "display:block");
-        console.log(statusBox);
+        // console.log(statusBox);
     } else if (statusBox === "scores") {
         initialBox.setAttribute("style", "display:block");
-        console.log(statusBox)
+        // console.log(statusBox)
         statusBox = "initial";
         finalScore = 100;
-        console.log(statusBox);
+        // console.log(statusBox);
     }
 })
 // button for clearing the list of highscores with initial and scores
@@ -231,7 +231,7 @@ startBtn.addEventListener("click", function() {
     setQuestion();
     setTime();
     document.querySelector("#initial").value = "";
-    console.log(statusBox);
+    // console.log(statusBox);
 });
 // button for submitting the highscores with initial
 // it shows error message when nothing is inputted
@@ -254,7 +254,7 @@ submitBtn.addEventListener("click", function(event) {
         resultBox.setAttribute("style", "display:none;");
         scoreBox.setAttribute("style", "display: block;");
         statusBox = "scores";
-        console.log(statusBox);
+        // console.log(statusBox);
     }
 })
 //A~D Button for answering the question
@@ -274,16 +274,16 @@ submitBtn.addEventListener("click", function(event) {
 //          calculate the final score by (1/totalquestiono) * 100
 ////////// A Button //////////
 aBtnEl.addEventListener("click", function() {
-    console.log(currentQuestion);
-    console.log(currentAnswer);
-    console.log(this.textContent)
+    // console.log(currentQuestion);
+    // console.log(currentAnswer);
+    // console.log(this.textContent)
     checkAnswer(this);
-    console.log(isTrue);
+    // console.log(isTrue);
     ///
     
     if (isTrue === true) {
         if (arraySets == "") {
-            console.log("no more question")
+            // console.log("no more question")
             resultMessage.textContent = "Well Done!"
             finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
             doneQuiz();
@@ -292,7 +292,7 @@ aBtnEl.addEventListener("click", function() {
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
-        console.log(messageLog.textContent)
+        // console.log(messageLog.textContent)
         setQuestion(); }
     } else if (secondsLeft <=15 && isTrue === false) {
         resultMessage.textContent = "TIMEOUT!"
@@ -307,20 +307,20 @@ aBtnEl.addEventListener("click", function() {
         finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
-    console.log(arraySets);
+    // console.log(arraySets);
 });
 ////////// B Button //////////
 bBtnEl.addEventListener("click", function() {
-    console.log(currentQuestion);
-    console.log(currentAnswer);
-    console.log(this.textContent)
+    // console.log(currentQuestion);
+    // console.log(currentAnswer);
+    // console.log(this.textContent)
     checkAnswer(this);
-    console.log(isTrue);
+    // console.log(isTrue);
     ///
     
     if (isTrue === true) {
         if (arraySets == "") {
-            console.log("no more question")
+            // console.log("no more question")
             resultMessage.textContent = "Well Done!"
             finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
             doneQuiz();
@@ -329,7 +329,7 @@ bBtnEl.addEventListener("click", function() {
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
-        console.log(messageLog.textContent)
+        // console.log(messageLog.textContent)
         setQuestion(); }
     } else if (secondsLeft <=15 && isTrue === false) {
         resultMessage.textContent = "TIMEOUT!"
@@ -344,20 +344,20 @@ bBtnEl.addEventListener("click", function() {
         finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
-    console.log(arraySets);
+    // console.log(arraySets);
 });
 ////////// C Button //////////
 cBtnEl.addEventListener("click", function() {
-    console.log(currentQuestion);
-    console.log(currentAnswer);
-    console.log(this.textContent)
+    // console.log(currentQuestion);
+    // console.log(currentAnswer);
+    // console.log(this.textContent)
     checkAnswer(this);
-    console.log(isTrue);
+    // console.log(isTrue);
     ///
     
     if (isTrue === true) {
         if (arraySets == "") {
-            console.log("no more question")
+            // console.log("no more question")
             resultMessage.textContent = "Well Done!"
             finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
             doneQuiz();
@@ -366,7 +366,7 @@ cBtnEl.addEventListener("click", function() {
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
-        console.log(messageLog.textContent)
+        // console.log(messageLog.textContent)
         setQuestion(); }
     } else if (secondsLeft <=15 && isTrue === false) {
         resultMessage.textContent = "TIMEOUT!"
@@ -381,20 +381,20 @@ cBtnEl.addEventListener("click", function() {
         finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
-    console.log(arraySets);
+    // console.log(arraySets);
 });
 ////////// D Button //////////
 dBtnEl.addEventListener("click", function() {
-    console.log(currentQuestion);
-    console.log(currentAnswer);
-    console.log(this.textContent)
+    // console.log(currentQuestion);
+    // console.log(currentAnswer);
+    // console.log(this.textContent)
     checkAnswer(this);
-    console.log(isTrue);
+    // console.log(isTrue);
     ///
     
     if (isTrue === true) {
         if (arraySets == "") {
-            console.log("no more question")
+            // console.log("no more question")
             resultMessage.textContent = "Well Done!"
             finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
             doneQuiz();
@@ -403,7 +403,7 @@ dBtnEl.addEventListener("click", function() {
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
         hideLogMessage();
-        console.log(messageLog.textContent)
+        // console.log(messageLog.textContent)
         setQuestion(); }
     } else if (secondsLeft <=15 && isTrue === false) {
         resultMessage.textContent = "TIMEOUT!"
@@ -418,7 +418,7 @@ dBtnEl.addEventListener("click", function() {
         finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
-    console.log(arraySets);
+    // console.log(arraySets);
 });
 
 // functions that  activates from the beginning. 
