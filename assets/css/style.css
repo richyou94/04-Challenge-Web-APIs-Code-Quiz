@@ -134,6 +134,7 @@ background-color: #b59880;
     bottom: 0;
     padding: 20px 0px;
     margin-bottom: 10px;
+    display: none;
 }
 
 .message {

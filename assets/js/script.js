@@ -4,6 +4,7 @@ var quizBox = document.querySelector(".multiple-choice-container");
 var timeLeft = document.querySelector("#timeLeft");
 var secondsLeft = 75;
 var messageLog = document.querySelector(".message")
+var messageBox = document.querySelector(".logMessage")
 
 var aBtnEl = document.querySelector(".aBtn")
 var bBtnEl = document.querySelector(".bBtn")
@@ -77,10 +78,14 @@ aBtnEl.addEventListener("click", function() {
     if (isTrue === true) {
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
-        
+
     } else {
+        messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again."
         minusTime();
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        }, 1500)
     }
 
 
