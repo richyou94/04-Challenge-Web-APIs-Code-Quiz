@@ -76,16 +76,21 @@ aBtnEl.addEventListener("click", function() {
     ///
 
     if (isTrue === true) {
+        messageBox.setAttribute("style", "display:block");
+        messageLog.textContent = "Correct!";
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        });
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
 
     } else {
         messageBox.setAttribute("style", "display:block")
-        messageLog.textContent = "Incorrect. Please try it again."
+        messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
         setTimeout(function() {
             messageBox.setAttribute("style", "display:none")
-        }, 1500)
+        }, 1500);
     }
 
 
@@ -101,12 +106,26 @@ bBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
+
     if (isTrue === true) {
+        messageBox.setAttribute("style", "display:block");
+        messageLog.textContent = "Correct!";
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        });
         setQuestion(); 
+    } else if (secondsLeft <=15 ) {
+
     } else {
-        messageLog.textContent = "Incorrect. Please try it again."
+        messageBox.setAttribute("style", "display:block")
+        messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        }, 1500);
     }
+
+
     console.log(arraySets);
 
 
@@ -119,12 +138,26 @@ cBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
+
     if (isTrue === true) {
+        messageBox.setAttribute("style", "display:block");
+        messageLog.textContent = "Correct!";
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        });
         setQuestion(); 
+    } else if (secondsLeft <=15 ) {
+
     } else {
-        messageLog.textContent = "Incorrect. Please try it again."
+        messageBox.setAttribute("style", "display:block")
+        messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        }, 1500);
     }
+
+
     console.log(arraySets);
 
 
@@ -137,13 +170,28 @@ dBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
+
     if (isTrue === true) {
+        messageBox.setAttribute("style", "display:block");
+        messageLog.textContent = "Correct!";
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        });
         setQuestion(); 
+    } else if (secondsLeft <=15 ) {
+
     } else {
-        messageLog.textContent = "Incorrect. Please try it again."
+        messageBox.setAttribute("style", "display:block")
+        messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        setTimeout(function() {
+            messageBox.setAttribute("style", "display:none")
+        }, 1500);
     }
+
+
     console.log(arraySets);
+
 
 });
 
