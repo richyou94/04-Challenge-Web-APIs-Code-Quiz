@@ -1,8 +1,11 @@
 var startBtn = document.querySelector(".startBtn");
 var initialBox = document.querySelector(".coding-quiz-container");
 var quizBox = document.querySelector(".multiple-choice-container");
+var resultBox = document.querySelector(".ending-container")
+
 var timeLeft = document.querySelector("#timeLeft");
 var secondsLeft = 75;
+
 var messageLog = document.querySelector(".message")
 var messageBox = document.querySelector(".logMessage")
 
@@ -10,6 +13,7 @@ var aBtnEl = document.querySelector(".aBtn")
 var bBtnEl = document.querySelector(".bBtn")
 var cBtnEl = document.querySelector(".cBtn")
 var dBtnEl = document.querySelector(".dBtn")
+var answerBtnEl = document.querySelector(".choiceBtn")
 
 var setOne = ["Commonly used data types DO NOT include:", "1. strings", "2. booleans", "3. alerts", "4. numbers"]
 var setTwo = ["The condition in an if / else statement is enclosed within", "1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"]
@@ -39,6 +43,16 @@ var answerSheetAnswer = [
 var currentQuestion;
 var currentAnswer;
 var isTrue;
+var myTimeout;
+
+function hideLogMessage() {
+    myTimeout = setTimeout(function() {
+        messageBox.setAttribute("style", "display:none")
+    }, 2000);
+}
+function terminateTimeOut() {
+    clearTimeout(myTimeout);
+}
 
 
 
@@ -74,24 +88,25 @@ aBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
-
+    
     if (isTrue === true) {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
-
+        clearInterval(timerInterval);
+        timeLeft.textContent = "0"
+        quizBox.setAttribute("style", "display:none");
+        resultBox.setAttribute("style", "display:block");
     } else {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
     }
     console.log(arraySets);
 });
@@ -103,24 +118,25 @@ bBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
-
+    
     if (isTrue === true) {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
-
+        clearInterval(timerInterval);
+        timeLeft.textContent = "0"
+        quizBox.setAttribute("style", "display:none");
+        resultBox.setAttribute("style", "display:block");
     } else {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
     }
     console.log(arraySets);
 });
@@ -132,24 +148,25 @@ cBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
-
+    
     if (isTrue === true) {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
-
+        clearInterval(timerInterval);
+        timeLeft.textContent = "0"
+        quizBox.setAttribute("style", "display:none");
+        resultBox.setAttribute("style", "display:block");
     } else {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
     }
     console.log(arraySets);
 });
@@ -161,24 +178,25 @@ dBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
-
+    
     if (isTrue === true) {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
         messageLog.textContent = "Correct!";
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); 
     } else if (secondsLeft <=15 ) {
-
+        clearInterval(timerInterval);
+        timeLeft.textContent = "0"
+        quizBox.setAttribute("style", "display:none");
+        resultBox.setAttribute("style", "display:block");
     } else {
+        terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
-        setTimeout(function() {
-            messageBox.setAttribute("style", "display:none")
-        }, 2000);
+        hideLogMessage();
     }
     console.log(arraySets);
 });
