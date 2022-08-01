@@ -42,14 +42,50 @@ var finalScore = 100
 
 
 // Variable for sets of multiple questions and answers
-var setOne = ["Commonly used data types DO NOT include:", "1. strings", "2. booleans", "3. alerts", "4. numbers"]
-var setTwo = ["The condition in an if / else statement is enclosed within", "1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"]
-var setThree = ["Arrays in Javascript can be used to store ______.", "1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"]
-var setFour = ["String values must be enclosed within __________ when being assigned to variables.", "1. commas", "2. curly brackets", "3. quotes", "4. parenthesis"]
-var setFive = ["A very useful tool used during development and debugging for printing content to the debugger is: ", "1. JavaScript", "2. terminal / bash", "3. for loops", "4. console.log"]
+var setOne = ["Commonly used data types DO NOT include:", 
+"1. strings", "2. booleans", "3. alerts", "4. numbers"]
+var setTwo = ["The condition in an if / else statement is enclosed within", 
+"1. quotes", "2. curly brackets", "3. parenthesis", "4. square brackets"]
+var setThree = ["Arrays in Javascript can be used to store ______.", 
+"1. numbers and strings", "2. other arrays", "3. booleans", "4. all of the above"]
+var setFour = ["String values must be enclosed within __________ when being assigned to variables.", 
+"1. commas", "2. curly brackets", "3. quotes", "4. parenthesis"]
+var setFive = ["A very useful tool used during development and debugging for printing content to the debugger is: ", 
+"1. JavaScript", "2. terminal / bash", "3. for loops", "4. console.log"]
+var setSix = ["What does HTML stand for?", 
+"1. Hyper Text Markup Language", "2. Hyperlinks and Text Markup Language", "3. Home Tool Markup Language", "4. None of the above"]
+var setSeven = ["Who is making the Web standards?", 
+"1. Mozilla", "2. The World Wide Web Consortium", "3. Google", "4. Microsoft"]
+var setEight = ["Choose the correct HTML element for the largest heading:",
+"1. <heading>", "2. <head>", "3. <h6>", "4. <h1>"]
+var setNine = ["What is the correct HTML element for inserting a line break?",
+"1. <break>", "2. <br>", "3. <lb>", "4. <hr>"]
+var setTen = ["What is the correct HTML for adding a background color?",
+'1. <body style="background-color:yellow;">', '2. <background>yellow</background>', '3. <body bg="yellow">', '4. None of the above']
+var setEleven = ["What is the correct HTML for creating a hyperlink?", 
+'1. <a>http://www.w3schools.com</a>', '2. <a href="http://www.w3schools.com">W3Schools</a>', '3. <a url="http://www.w3schools.com">W3Schools.com</a>', '4. <a name="http://www.w3schools.com">W3Schools.com</a>']
+var setTwelve = ["What does CSS stand for?", 
+"1. Cascading Style Sheets", "2. Creative Style Sheets", "3. Computer Style Sheets", "4. Colorful Style Sheets"]
+var setThirteen = ["Which HTML attribute is used to define inline styles?",
+"1. style", "2. styles", "3. class", "4. font"]
+var setFourteen = ["Which CSS property controls the text size?",
+"1. text-style", "2. font-size", "3. text-size", "4. font-style"]
+var setFifteen = ["How do you select an element with id 'demo'?", 
+"1. .demo", "2. demo", "3. *demo", "4. #demo"]
+var setSixteen = ["What is the default value of the position property?",
+"1. relative", "2. static", "3. fixed", "4. absolute"]
+var setSeventeen = ["Inside which HTML element do we put the JavaScript?",
+"1. <js>", "2. <script>", "3. <scripting>", "4. <javascript>"]
+var setEighteen = ["How do you make each word in a text start with a capital letter?",
+"1. You can't do that with CSS", "2. text-transform:capitalize", "3. text-style:capitalize", "4. transform:capitalize"]
+var setNineteen = ["How do you write 'Hello World' in an alert box?",
+"1. alert('Hello World');", "2. msg('Hellow World');", "3. msgBox('Hello World');", "4. alertBox('Hello World');"]
+var setTwenty = ["How to write an IF statement in JavaScript?",
+"1. if i == 4 then", "2. if i = 5 then", "3. if (i == 5)", "4. if i = 5"]
+
 
 // Total array for whole question sets
-var arraySets = [setOne, setTwo, setThree, setFour, setFive]
+var arraySets = [setOne, setTwo, setThree, setFour, setFive, setSix, setSeven, setEight, setNine, setTen, setEleven, setTwelve, setThirteen, setFourteen, setFifteen, setSixteen, setSeventeen, setEighteen, setNineteen, setTwenty]
 
 // variable for question (empty at beginning)
 var questionEl = document.querySelector(".multiple-choice-title")
@@ -59,7 +95,22 @@ var answerSheetQuestion = ["Commonly used data types DO NOT include:",
 "The condition in an if / else statement is enclosed within", 
 "Arrays in Javascript can be used to store ______.", 
 "String values must be enclosed within __________ when being assigned to variables.",
-"A very useful tool used during development and debugging for printing content to the debugger is: "
+"A very useful tool used during development and debugging for printing content to the debugger is: ",
+"What does HTML stand for?",
+"Who is making the Web standards?",
+"Choose the correct HTML element for the largest heading:",
+"What is the correct HTML element for inserting a line break?",
+"What is the correct HTML for adding a background color?",
+"What is the correct HTML for creating a hyperlink?", 
+"What does CSS stand for?", 
+"Which HTML attribute is used to define inline styles?",
+"Which CSS property controls the text size?",
+"How do you select an element with id 'demo'?", 
+"What is the default value of the position property?",
+"Inside which HTML element do we put the JavaScript?",
+"How do you make each word in a text start with a capital letter?",
+"How do you write 'Hello World' in an alert box?",
+"How to write an IF statement in JavaScript?",
 ]
 // variable of array of correct answers to match with questions' array
 var answerSheetAnswer = [
@@ -67,7 +118,22 @@ var answerSheetAnswer = [
     "3. parenthesis",
     "4. all of the above",
     "3. quotes",
-    "4. console.log"
+    "4. console.log",
+    "1. Hyper Text Markup Language",
+    "2. The World Wide Web Consortium",
+    "4. <h1>",
+    "2. <br>",
+    '1. <body style="background-color:yellow;">',
+    '2. <a href="http://www.w3schools.com">W3Schools</a>',
+    "1. Cascading Style Sheets",
+    "1. style",
+    "2. font-size",
+    "4. #demo",
+    "2. static",
+    "2. <script>",
+    "2. text-transform:capitalize",
+    "1. alert('Hello World');",
+    "3. if (i == 5)"
 ]
 
 // variable for finding correct answers of current state
@@ -128,6 +194,8 @@ function setTime() {
             resultMessage.textContent = "TIMEOUT!"
             finalScore = 0;
             finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+            arraySets = [setOne, setTwo, setThree, setFour, setFive, setSix, setSeven, setEight, setNine, setTen, setEleven, setTwelve, setThirteen, setFourteen, setFifteen, setSixteen, setSeventeen, setEighteen, setNineteen, setTwenty]
+            statusBox = "result";   
         }
     }, 1000);    
 };
@@ -149,7 +217,7 @@ function doneQuiz() {
     clearInterval(timerInterval);
     secondsLeft = 0;
     // timeLeft.textContent = secondsLeft;
-    arraySets = [setOne, setTwo, setThree, setFour, setFive]
+    arraySets = [setOne, setTwo, setThree, setFour, setFive, setSix, setSeven, setEight, setNine, setTen, setEleven, setTwelve, setThirteen, setFourteen, setFifteen, setSixteen, setSeventeen, setEighteen, setNineteen, setTwenty]
     quizBox.setAttribute("style", "display:none;");
     resultBox.setAttribute("style", "display:block");
     statusBox = "result";
@@ -168,6 +236,7 @@ function checkAnswer(btn) {
 // splice the array of that question with same random number I received at beginning
 function setQuestion() {
     var randomNum = Math.floor(Math.random() * arraySets.length)
+    console.log(arraySets.length)
     var selectedArray = arraySets[randomNum]
     
     questionEl.textContent = selectedArray[0];
@@ -182,6 +251,7 @@ function setQuestion() {
     ];
     arraySets.splice(randomNum, 1)
     displayMessage("", "");
+    console.log(arraySets.length)
 }
 
 //****************   Button add Event Listener   ****************//
@@ -313,7 +383,7 @@ aBtnEl.addEventListener("click", function() {
 });
 ////////// B Button //////////
 bBtnEl.addEventListener("click", function() {
-     // console.log(currentQuestion);
+    // console.log(currentQuestion);
     // console.log(currentAnswer);
     // console.log(this.textContent)
     checkAnswer(this);
@@ -352,7 +422,7 @@ bBtnEl.addEventListener("click", function() {
 });
 ////////// C Button //////////
 cBtnEl.addEventListener("click", function() {
-     // console.log(currentQuestion);
+    // console.log(currentQuestion);
     // console.log(currentAnswer);
     // console.log(this.textContent)
     checkAnswer(this);
