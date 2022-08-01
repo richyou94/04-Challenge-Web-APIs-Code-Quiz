@@ -2,14 +2,18 @@ var startBtn = document.querySelector(".startBtn");
 var initialBox = document.querySelector(".coding-quiz-container");
 var quizBox = document.querySelector(".multiple-choice-container");
 var timeLeft = document.querySelector("#timeLeft");
-var secondsLeft = 5;
+var secondsLeft = 100;
+var aBtnEl = document.querySelector(".aBtn")
 
 function setTime() {
     var timerInterval = setInterval(function() {
         secondsLeft--;
         timeLeft.textContent = secondsLeft;
-        // if statement
     }, 1000);
+
+    aBtnEl.addEventListener("click", function() {
+        secondsLeft = secondsLeft - 10;
+    })
 }
 
 startBtn.addEventListener("click", function() {
@@ -17,3 +21,4 @@ startBtn.addEventListener("click", function() {
     quizBox.setAttribute("style", "display: block")
     setTime();
 });
+
