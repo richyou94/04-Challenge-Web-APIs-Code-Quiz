@@ -45,10 +45,16 @@ function setTime() {
         timerInterval = setInterval(function() {
         secondsLeft--;
         timeLeft.textContent = secondsLeft;
+        if (secondsLeft <= 0) {
+            console.log("TIMEOUT")
+        }
     }, 1000);
 
     
 };
+function minusTime() {
+    secondsLeft = secondsLeft - 15;
+}
 
 startBtn.addEventListener("click", function() {
     var arraySets = [setOne, setTwo, setThree, setFour, setFive]
@@ -66,11 +72,15 @@ aBtnEl.addEventListener("click", function() {
     checkAnswer(this);
     console.log(isTrue);
     ///
+
     if (isTrue === true) {
         setQuestion(); 
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
+        minusTime();
     }
+
+
     console.log(arraySets);
 
     
@@ -87,6 +97,7 @@ bBtnEl.addEventListener("click", function() {
         setQuestion(); 
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
+        minusTime();
     }
     console.log(arraySets);
 
@@ -104,6 +115,7 @@ cBtnEl.addEventListener("click", function() {
         setQuestion(); 
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
+        minusTime();
     }
     console.log(arraySets);
 
@@ -121,6 +133,7 @@ dBtnEl.addEventListener("click", function() {
         setQuestion(); 
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
+        minusTime();
     }
     console.log(arraySets);
 
