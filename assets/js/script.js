@@ -9,6 +9,10 @@ var secondsLeft = 75;
 var messageLog = document.querySelector(".message")
 var messageBox = document.querySelector(".logMessage")
 
+var resultMessage = document.querySelector(".resultLog")
+var finalScoreEl = document.querySelector(".finalScore")
+var finalScore = 100
+
 var aBtnEl = document.querySelector(".aBtn")
 var bBtnEl = document.querySelector(".bBtn")
 var cBtnEl = document.querySelector(".cBtn")
@@ -81,6 +85,12 @@ startBtn.addEventListener("click", function() {
     setTime();
 });
 
+function doneQuiz() {
+    clearInterval(timerInterval);
+    timeLeft.textContent = "0";
+    quizBox.setAttribute("style", "display:none;");
+    resultBox.setAttribute("style", "display:block");
+}
 
 aBtnEl.addEventListener("click", function() {
     console.log(currentQuestion);
@@ -93,6 +103,9 @@ aBtnEl.addEventListener("click", function() {
     if (isTrue === true) {
         if (arraySets == "") {
             console.log("no more question")
+            resultMessage.textContent = "Well Done!"
+            finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+            doneQuiz();
         } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
@@ -100,16 +113,17 @@ aBtnEl.addEventListener("click", function() {
         hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); }
-    } else if (secondsLeft <=15 ) {
-        clearInterval(timerInterval);
-        timeLeft.textContent = "0"
-        quizBox.setAttribute("style", "display:none");
-        resultBox.setAttribute("style", "display:block");
+    } else if (secondsLeft <=15 && isTrue === false) {
+        resultMessage.textContent = "TIMEOUT!"
+        finalScore = 0;
+        finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        doneQuiz();
     } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
     console.log(arraySets);
@@ -126,6 +140,9 @@ bBtnEl.addEventListener("click", function() {
     if (isTrue === true) {
         if (arraySets == "") {
             console.log("no more question")
+            resultMessage.textContent = "Well Done!"
+            finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+            doneQuiz();
         } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
@@ -133,16 +150,17 @@ bBtnEl.addEventListener("click", function() {
         hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); }
-    } else if (secondsLeft <=15 ) {
-        clearInterval(timerInterval);
-        timeLeft.textContent = "0"
-        quizBox.setAttribute("style", "display:none");
-        resultBox.setAttribute("style", "display:block");
+    } else if (secondsLeft <=15 && isTrue === false) {
+        resultMessage.textContent = "TIMEOUT!"
+        finalScore = 0;
+        finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        doneQuiz();
     } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
     console.log(arraySets);
@@ -159,6 +177,9 @@ cBtnEl.addEventListener("click", function() {
     if (isTrue === true) {
         if (arraySets == "") {
             console.log("no more question")
+            resultMessage.textContent = "Well Done!"
+            finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+            doneQuiz();
         } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
@@ -166,16 +187,17 @@ cBtnEl.addEventListener("click", function() {
         hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); }
-    } else if (secondsLeft <=15 ) {
-        clearInterval(timerInterval);
-        timeLeft.textContent = "0"
-        quizBox.setAttribute("style", "display:none");
-        resultBox.setAttribute("style", "display:block");
+    } else if (secondsLeft <=15 && isTrue === false) {
+        resultMessage.textContent = "TIMEOUT!"
+        finalScore = 0;
+        finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        doneQuiz();
     } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
     console.log(arraySets);
@@ -192,7 +214,9 @@ dBtnEl.addEventListener("click", function() {
     if (isTrue === true) {
         if (arraySets == "") {
             console.log("no more question")
-            
+            resultMessage.textContent = "Well Done!"
+            finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+            doneQuiz();
         } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block;");
@@ -200,16 +224,17 @@ dBtnEl.addEventListener("click", function() {
         hideLogMessage();
         console.log(messageLog.textContent)
         setQuestion(); }
-    } else if (secondsLeft <=15 ) {
-        clearInterval(timerInterval);
-        timeLeft.textContent = "0"
-        quizBox.setAttribute("style", "display:none");
-        resultBox.setAttribute("style", "display:block");
+    } else if (secondsLeft <=15 && isTrue === false) {
+        resultMessage.textContent = "TIMEOUT!"
+        finalScore = 0;
+        finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        doneQuiz();
     } else {
         terminateTimeOut();
         messageBox.setAttribute("style", "display:block")
         messageLog.textContent = "Incorrect. Please try it again.";
         minusTime();
+        finalScore = finalScore - (1/answerSheetQuestion.length) * 100
         hideLogMessage();
     }
     console.log(arraySets);
