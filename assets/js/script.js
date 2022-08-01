@@ -148,7 +148,7 @@ function displayMessage(type, message) {
 function doneQuiz() {
     clearInterval(timerInterval);
     secondsLeft = 0;
-    timeLeft.textContent = secondsLeft;
+    // timeLeft.textContent = secondsLeft;
     arraySets = [setOne, setTwo, setThree, setFour, setFive]
     quizBox.setAttribute("style", "display:none;");
     resultBox.setAttribute("style", "display:block");
@@ -298,6 +298,8 @@ aBtnEl.addEventListener("click", function() {
         resultMessage.textContent = "TIMEOUT!"
         finalScore = 0;
         finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        secondsLeft = 0;
+        timeLeft.textContent = secondsLeft
         doneQuiz();
     } else {
         terminateTimeOut();
@@ -311,7 +313,7 @@ aBtnEl.addEventListener("click", function() {
 });
 ////////// B Button //////////
 bBtnEl.addEventListener("click", function() {
-    // console.log(currentQuestion);
+     // console.log(currentQuestion);
     // console.log(currentAnswer);
     // console.log(this.textContent)
     checkAnswer(this);
@@ -335,6 +337,8 @@ bBtnEl.addEventListener("click", function() {
         resultMessage.textContent = "TIMEOUT!"
         finalScore = 0;
         finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        secondsLeft = 0;
+        timeLeft.textContent = secondsLeft
         doneQuiz();
     } else {
         terminateTimeOut();
@@ -348,7 +352,7 @@ bBtnEl.addEventListener("click", function() {
 });
 ////////// C Button //////////
 cBtnEl.addEventListener("click", function() {
-    // console.log(currentQuestion);
+     // console.log(currentQuestion);
     // console.log(currentAnswer);
     // console.log(this.textContent)
     checkAnswer(this);
@@ -372,6 +376,8 @@ cBtnEl.addEventListener("click", function() {
         resultMessage.textContent = "TIMEOUT!"
         finalScore = 0;
         finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        secondsLeft = 0;
+        timeLeft.textContent = secondsLeft
         doneQuiz();
     } else {
         terminateTimeOut();
@@ -385,7 +391,7 @@ cBtnEl.addEventListener("click", function() {
 });
 ////////// D Button //////////
 dBtnEl.addEventListener("click", function() {
-    // console.log(currentQuestion);
+     // console.log(currentQuestion);
     // console.log(currentAnswer);
     // console.log(this.textContent)
     checkAnswer(this);
@@ -409,6 +415,8 @@ dBtnEl.addEventListener("click", function() {
         resultMessage.textContent = "TIMEOUT!"
         finalScore = 0;
         finalScoreEl.textContent = `Your final score is ${finalScore} / 100`
+        secondsLeft = 0;
+        timeLeft.textContent = secondsLeft
         doneQuiz();
     } else {
         terminateTimeOut();
