@@ -47,6 +47,7 @@ function setTime() {
         timeLeft.textContent = secondsLeft;
         if (secondsLeft <= 0) {
             console.log("TIMEOUT")
+            clearInterval(timerInterval);
         }
     }, 1000);
 
@@ -75,6 +76,8 @@ aBtnEl.addEventListener("click", function() {
 
     if (isTrue === true) {
         setQuestion(); 
+    } else if (secondsLeft <=15 ) {
+        
     } else {
         messageLog.textContent = "Incorrect. Please try it again."
         minusTime();
