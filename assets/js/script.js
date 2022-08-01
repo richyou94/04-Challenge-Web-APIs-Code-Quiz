@@ -20,6 +20,7 @@ var arraySets = [setOne, setTwo, setThree, setFour, setFive]
 
 var questionEl = document.querySelector(".multiple-choice-title")
 
+var currentQuestion
 
 
 function setTime() {
@@ -29,29 +30,36 @@ function setTime() {
     }, 1000);
 
     
-}
+};
 
 startBtn.addEventListener("click", function() {
+    var arraySets = [setOne, setTwo, setThree, setFour, setFive]
     initialBox.setAttribute("style", "display: none")
     quizBox.setAttribute("style", "display: block")
-    initialQuestion();
+    setQuestion();
     setTime();
 });
 
 
 aBtnEl.addEventListener("click", function() {
-    clearInterval(timerInterval);
-    console.log(aBtnEl.textContent)
-})
+    
+    
+});
+
 bBtnEl.addEventListener("click", function() {
-    clearInterval(timerInterval);
-})
+    
+
+});
+
 cBtnEl.addEventListener("click", function() {
-    clearInterval(timerInterval);
-})
+    
+
+});
+
 dBtnEl.addEventListener("click", function() {
-    clearInterval(timerInterval);
-})
+    console.log(currentQuestion)
+
+});
 
 
 
@@ -59,10 +67,19 @@ function checkAnswer(a, b) {
     
 }
 
-function initialQuestion() {
-    questionEl.textContent = setOne[0];
-    choiceOne.textContent = setOne[1];
-    choiceTwo.textContent = setOne[2];
-    choiceThree.textContent = setOne[3];
-    choiceFour.textContent = setOne[4]; 
+function setQuestion() {
+    
+    var randomNum = Math.floor(Math.random() * arraySets.length)
+    var selectedArray = arraySets[randomNum]
+    
+    questionEl.textContent = selectedArray[0];
+    aBtnEl.textContent = selectedArray[1];
+    bBtnEl.textContent = selectedArray[2];
+    cBtnEl.textContent = selectedArray[3];
+    dBtnEl.textContent = selectedArray[4]; 
+
+    currentQuestion = arraySets[randomNum][0]
+    arraySets.splice(randomNum, 1)
+    
+
 }
